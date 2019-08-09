@@ -20,9 +20,9 @@ RUN LANG=nl_NL.UTF-8 urdfdom_build/urdf_unit_test ; exit 0
 RUN echo '# END SECTION'
 
 # Install new urdfdom package
-RUN echo 'echo # BEGIN SECTION: install patche PPA version of urdfdom-headers pkg'
+RUN echo 'echo # BEGIN SECTION: install patche PPA version of urdfdom pkgs'
 RUN add-apt-repository ppa:j-rivero/urdfdom-headers-sru2
-RUN apt-get update && apt-get install -yy liburdfdom-headers-dev
+RUN apt-get update && apt-get install -yy liburdfdom-headers-dev liburdfdom-dev
 RUN echo '# END SECTION'
 
 ARG CACHE_DATE=not_a_date
